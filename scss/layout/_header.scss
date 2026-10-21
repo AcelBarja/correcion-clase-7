@@ -1,0 +1,13 @@
+@use "../utilities/variables" as *;
+.header1 {
+  width: 100%;
+  background-color: $color-rojo;
+  padding: 5px 0;
+  img {
+    width: 70px;
+    height: auto;
+    @media (min-width: 1024px) {
+      width: 60px;
+    }
+  }
+}

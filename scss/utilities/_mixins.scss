@@ -1,0 +1,12 @@
+@mixin transicion-suave($prop: all, $tiempo: 0.25s) {
+  transition: $prop $tiempo ease;
+}
+
+@mixin item-grid-fondo($ruta-imagen) {
+  background-color: #1D1D1D;
+  color: snow;
+  background-image: url($ruta-imagen);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,27 @@
+@use "../utilities/variables" as *;
+.styleandcolorandtypographimain {
+  text-decoration: none;
+  font-family: $fuente-titulos;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: $color-claro;
+  @media (min-width: 1024px) {
+    font-size: 4rem;
+  }
+}
+
+.fondorojo {
+  background-color: $color-rojo;
+}
+
+.centradoytipografias {
+  font-family: $fuente-textos;
+  color: $color-oscuro;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.tipografiayescala {
+  font-family: $fuente-textos;
+  font-size: 2rem;
+}

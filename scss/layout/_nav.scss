@@ -1,0 +1,63 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+.liconfig {
+  color: whitesmoke !important;
+  text-decoration: none;
+  font-family: $fuente-textos;
+  font-size: 1.1rem;
+  @include transicion-suave(all, 0.2s);
+  &:focus {
+    color: $color-crema !important;
+    outline: 2px dashed $color-crema;
+    outline-offset: 4px;
+  }
+  &:active {
+    color: #FFFFFF !important;
+    transform: scale(0.96);
+  }
+  &:hover {
+    color: $color-crema !important;
+    transform: translateY(-2px);
+  }
+}
+
+.ulconf {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+    gap: 24px;
+  }
+}
+
+.stylenavp {
+  font-family: $fuente-textos;
+  color: $color-oscuro;
+  font-size: 2rem;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.contenedornav {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.stylelistnav {
+  color: $color-claro;
+  background-color: $color-rojo;
+  font-family: $fuente-textos;
+  font-size: 2rem;
+  list-style: none;
+  text-decoration: none;
+  border-bottom: 2px solid $color-oscuro;
+}
+
+.styleul {
+  list-style: none;
+  text-decoration: none;
+}

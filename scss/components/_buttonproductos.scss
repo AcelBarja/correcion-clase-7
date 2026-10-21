@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+.btn-osaka-hero {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: $color-crema;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem; // Tamaño grande e imponente
+  letter-spacing: 3px;
+  padding: 12px 32px;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: color 0.3s ease, letter-spacing 0.3s ease, text-shadow 0.3s ease;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 3px;
+    background-color: $color-rojo;
+    transition: width 0.4s ease;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+  &:hover {
+    color: #FFFFFF;
+    letter-spacing: 6px; // Expansión de las letras
+    text-shadow: 0 0 12px rgba(200, 0, 13, 0.6);
+    &::before,
+    &::after {
+      width: 100%; // Las líneas se abren de centro a extremos
+    }
+  }
+}

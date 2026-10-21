@@ -1,0 +1,14 @@
+@use "../utilities/variables" as *;
+.stylenewslater {
+  color: $color-crema;
+}
+
+.contactos {
+  color: $color-crema;
+  font-family: $fuente-textos;
+}
+
+.centradoinstagram {
+  text-align: right;
+  padding: 5px;
+}

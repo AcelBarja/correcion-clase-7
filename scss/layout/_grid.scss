@@ -1,0 +1,52 @@
+@use "../utilities/mixins" as *;
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 220px);
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 40px;
+  grid-template-areas:
+    "uno"
+    "dos"
+    "tres"
+    "cuatro"
+    "cinco";
+  @media (min-width: 1024px) {
+    height: auto;
+    min-height: 450px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px 250px;
+    gap: 15px;
+    padding: 20px;
+    margin-bottom: 50px;
+    grid-template-areas:
+      "uno dos tres"
+      "cuatro cuatro cinco";
+  }
+}
+
+.item-uno {
+  grid-area: uno;
+  @include item-grid-fondo("../assets/motor.png");
+}
+
+.item-dos {
+  grid-area: dos;
+  @include item-grid-fondo("../assets/turbo.png");
+}
+
+.item-tres {
+  grid-area: tres;
+  @include item-grid-fondo("../assets/distribucion.png");
+}
+
+.item-cuatro {
+  grid-area: cuatro;
+  @include item-grid-fondo("../assets/taller.png");
+}
+
+.item-cinco {
+  grid-area: cinco;
+  @include item-grid-fondo("../assets/herramientas.png");
+}

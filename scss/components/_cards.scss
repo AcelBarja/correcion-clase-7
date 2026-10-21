@@ -1,0 +1,160 @@
+@use "../utilities/variables" as *;
+.productos-seccion-index {
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  background-color: $color-rojo;
+  text-align: center;
+}
+.producto-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  padding: 16px;
+  background-color: $color-rojo;
+  text-align: center;
+}
+.imagen-producto {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.productos-contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.productos-contenedor-columna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+.servicios-seccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 20px;
+  text-align: center;
+}
+.servicios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+}
+.listadeserviciosnosotros {
+  font-family: $fuente-textos;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: $color-oscuro;
+  color: $color-crema;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+.listadeservicios {
+  font-family: $fuente-textos;
+  font-size: 3rem;
+  text-align: start;
+  background-color: $color-oscuro;
+  color: $color-crema;
+}
+.descripcionimagenes {
+  text-align: center;
+  font-size: 1rem;
+  color: $color-magenta;
+}
+.grillaboots {
+  border: solid 2px black;
+  div {
+    border: solid 1px red;
+    height: 250px;
+  }
+}
+.card-oferta {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #111111; // Fondo oscuro para evitar la barra blanca
+  .card-oferta-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block; // Elimina el espacio blanco inferior que dejan las imágenes inline
+    filter: brightness(0.35); // Oscurece la foto para dar contraste
+  }
+  .card-oferta-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    // Capa oscura sólida a la izquierda que se difumina hacia la derecha
+    background: linear-gradient(90deg, rgba(10, 10, 10, 0.95) 0%, rgba(15, 15, 15, 0.85) 50%, rgba(200, 0, 13, 0.3) 85%, transparent 100%);
+    z-index: 2;
+  }
+  .card-title {
+    font-family: "Bebas Neue", sans-serif;
+    color: $color-crema;
+    letter-spacing: 1px;
+    max-width: 650px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9); // Sombra para legibilidad total
+  }
+  .card-text {
+    font-family: $fuente-textos;
+    color: #F8F9FA;
+    max-width: 520px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+  }
+  .badge {
+    font-family: $fuente-textos;
+    background-color: $color-rojo !important;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+  }
+  .btn-danger {
+    background-color: $color-rojo;
+    border: none;
+    font-family: $fuente-textos;
+    font-weight: bold;
+    padding: 10px 24px;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+    &:hover {
+      background-color: darken($color-rojo, 10%);
+      transform: translateY(-2px);
+    }
+  }
+  // Estilo propio de la cruz (garantiza que siempre se vea en blanco y arriba)
+  .card-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    line-height: 1;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    &:hover {
+      background-color: $color-rojo;
+      transform: scale(1.1);
+      border-color: transparent;
+    }
+  }
+}
